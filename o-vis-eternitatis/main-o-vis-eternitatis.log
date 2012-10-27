@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.70.1-2011120612  (format=lualatex 2012.9.9)  27 OCT 2012 08:08
+This is LuaTeX, Version beta-0.70.1-2011120612  (format=lualatex 2012.9.9)  27 OCT 2012 15:29
 **main-o-vis-eternitatis.tex
 (./main-o-vis-eternitatis.tex
 LaTeX2e <2009/09/24>
@@ -457,11 +457,15 @@ checksum mismatch in font pplri8t.vf ignored  (./o-vis-eternitatis.tex
 luamcallbacks: inserting function 'gregoriotex.callback' at position 1 in callb
 ack list for 'post_linebreak_filter'
 checksum mismatch in font pplr8t.vf ignored 
+Underfull \hbox (badness 10000) in paragraph at lines 3--979
+
+ []
+
 luamcallbacks: removing function 'gregoriotex.callback' from 'post_linebreak_fi
 lter') [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main-o-vis-eternitatis.
-aux) )
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./main-o-vis-eternitatis.aux) )
 
 Here is how much of LuaTeX's memory you used:
  3552 strings out of 495130
@@ -470,7 +474,7 @@ Here is how much of LuaTeX's memory you used:
    3741 hlist, 618 vlist, 2508 rule, 1 disc, 6204 glue, 2540 kern, 15 penalty, 
 1236 glyph, 2591 attribute, 90 glue_spec, 1299 attribute_list, 1 write, 1 dir, 
 1 late_lua nodes
-   avail lists: 2:2462,3:906,4:517,5:1206,6:1129,7:177,9:603,10:28
+   avail lists: 2:2444,3:905,4:514,5:1201,6:1127,7:193,9:603,10:31
  6718 multiletter control sequences out of 65536+50000
  44 fonts using 3397767 bytes
  35i,5n,37p,646b,138s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -483,7 +487,7 @@ oriotex/greciliae/greciliae-6.pfb></usr/share/texmf/fonts/type1/public/gregorio
 tex/gresym/gresym.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/
 texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main-o-vis-eternitatis.pdf (1 page, 153904 bytes).
+Output written on main-o-vis-eternitatis.pdf (1 page, 153779 bytes).
 
 PDF statistics: 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
