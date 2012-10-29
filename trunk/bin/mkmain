@@ -1,0 +1,43 @@
+#!/usr/bin/perl -w
+
+use strict;
+use warnings;
+
+my $file = "main-$ARGV[0].tex";
+
+unless(open OUTPUT, '>'.$file){
+	die "\nUnable to create $file\n";
+}
+
+unless(open TEMPLATE, '../templates/main-lualatex.tex'){
+	die "\nUnable to open template\n";
+}
+
+unless(open GABC, "$ARGV[0].gabc"){
+	die "\nUnable to open template\n";
+}
+my %headers = ('filename', "$ARGV[0].tex");
+my $line = <GABC>;
+until($line =~ /%%/){
+	chomp($line);
+	$line =~ s/;//g;
+	my @array = split(/: /,$line,2);
+	$headers{ $array[0] } = $array[1];
+	$line = <GABC>;
+}
+close GABC;
+while( my ($k, $v) = each (%headers) ) {
+        print "key: $k, value: $v\n";
+    }
+
+while(my $line = <TEMPLATE>) {
+	unless ($line =~ /##.*##/){
+		print OUTPUT $line;
+	}
+	else { 
+		$line =~ s/##([^#]*)##/$headers{ $1 }/g;
+		print OUTPUT $line;
+	}
+}
+close TEMPLATE;
+close OUTPUT;
