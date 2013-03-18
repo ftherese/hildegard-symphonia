@@ -2,8 +2,11 @@
 
 use strict;
 use warnings;
+use File::Copy qw(copy);
 
-my $file = "main-$ARGV[0].tex";
+chomp(my $dirname = `basename \$PWD`);
+
+my $file = "main-$dirname.tex";
 
 unless(open OUTPUT, '>'.$file){
 	die "\nUnable to create $file\n";
@@ -13,10 +16,11 @@ unless(open TEMPLATE, '../templates/main-lualatex.tex'){
 	die "\nUnable to open template\n";
 }
 
-unless(open GABC, "$ARGV[0].gabc"){
-	die "\nUnable to open template\n";
+unless(open GABC, "$dirname.gabc"){
+	open GABC, '../templates/gabc-template.gabc';
+	copy "../templates/gabc-template.gabc", "$dirname.gabc";
 }
-my %headers = ('filename', "$ARGV[0].tex");
+my %headers = ('filename', "$dirname.tex");
 my $line = <GABC>;
 until($line =~ /%%/){
 	chomp($line);
